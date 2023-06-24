@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+.profile_card_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 3px 2px rgba(10, 93, 110, 0.2);
+    position: relative;
+}
+
+.profile_card_container::before {
+    content: '';
+    position: absolute;
+    height: 8rem;
+    width: 100%;
+    top: 0;
+    background-image: linear-gradient(0deg, #b0dae5 21%, #2b7ead 81%);
+    border-radius: 20px 20px 0 0;
+}
+
+
+.image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: rgb(207, 224, 248);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.image .profile_img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px black;
+    border-style: solid dashed;
+}
+
+.profile_card_container .profile_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile_text .name {
+    font-size: 1.75rem;
+    font-weight: 900;
+}
+
+.profile_text .job {
+    font-size: 1rem;
+    font-weight: 100;
+    color: rgb(143, 148, 148);
+    margin-bottom: 15px;
+}
+
+.profile_text .description {
+    font-size: 1.1rem;
+    font-weight: 100;
+    text-align: justify;
+    position: relative;
+}
+
+.profile_card_container .profile_socials {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.profile_socials img {
+    height: 30px;
+    width: 30px;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+
+.profile_button button {
+    background-color: rgb(207, 224, 248);
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.profile_button button:hover {
+    background-color: rgb(19, 195, 255);
+}
+
+.profile_button img{
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile_card_container {
+        margin: 20px;
+    }
+}
